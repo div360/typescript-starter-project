@@ -76,6 +76,19 @@
     background: linear-gradient(#f5f5f5, #f5f5f5) padding-box, linear-gradient(60deg,#1E9AFE, #60DFCD) border-box; 
 }
 
+.dragPending{
+    background-color: #D1D9E0;
+}
+
+.dragOngoing{
+    background-color: #D1D9E0;
+}
+
+.dragCompleted{
+    overflow: hidden;
+    background: linear-gradient(#D1D9E0, #D1D9E0) padding-box, linear-gradient(60deg,#1E9AFE, #60DFCD) border-box;
+}
+
 .tasks_single {
     padding: 10px;
     display: flex;
@@ -113,6 +126,11 @@
 
 .tasks_single--text:focus {
     outline: none;
+}
+
+.dragging{
+    box-shadow: 0 0 15px black;
+    transform: scale(1.05);
 }
 
 @media(max-width: 1200px) {

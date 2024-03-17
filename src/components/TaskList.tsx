@@ -20,9 +20,9 @@ const TaskList = ({ tasks, dispatch }: Props) => {
     // </div>
     <div className="container">
       <Droppable droppableId="TasksPending">
-        {(provided) => (
+        {(provided, snapshot) => (
           <div
-            className="tasks pending"
+            className={`tasks pending ${snapshot.isDraggingOver ? "dragPending" : ""}`}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
@@ -45,9 +45,9 @@ const TaskList = ({ tasks, dispatch }: Props) => {
         )}
       </Droppable>
       <Droppable droppableId="TasksOngoing">
-        {(provided) => (
+        {(provided,snapshot) => (
           <div
-            className="tasks ongoing"
+            className={`tasks ongoing ${snapshot.isDraggingOver ? "dragOngoing" : ""}`}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
@@ -70,9 +70,9 @@ const TaskList = ({ tasks, dispatch }: Props) => {
         )}
       </Droppable>
       <Droppable droppableId="TasksCompleted">
-        {(provided) => (
+        {(provided, snapshot) => (
           <div
-            className="tasks completed"
+            className={`tasks completed ${snapshot.isDraggingOver ? "dragCompleted" : ""}`}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >

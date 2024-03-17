@@ -46,9 +46,9 @@ const SingleTask = ({ index, task, tasks, dispatch }: Props) => {
 
   return (
     <Draggable draggableId={task.id.toString()} index={index}>
-      {(provided) => (
+      {(provided, snapshot) => (
         <form
-          className="tasks_single"
+          className={`tasks_single ${snapshot.isDragging ? "dragging" : ""}`}
           onSubmit={(e) => handleEdit(e, task)}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
