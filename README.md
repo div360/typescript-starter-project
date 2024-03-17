@@ -17,22 +17,22 @@ A feature-rich todo list application built with React.js and TypeScript, providi
 
 1. Clone the repository:
 
-`
-git clone https://github.com/your-username/your-todo-app.git
-`
+  `
+  git clone https://github.com/your-username/your-todo-app.git
+  `
 
 2. Install dependencies:
 
-`
-cd your-todo-app
-npm install
-`
+  `
+  cd your-todo-app
+  npm install
+  `
 
 3. Start the development server:
 
-`
-npm start
-`
+  `
+  npm start
+  `
 
 ### Development
 
