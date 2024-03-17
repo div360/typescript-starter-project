@@ -4,14 +4,14 @@ import background from './assets/background.svg';
 import InputField from './components/InputField';
 import { Task } from './model/Task';
 import TaskList from './components/TaskList';
-import { TaskReducer } from './Reducer';
+import { TaskReducer, initializeState } from './Reducer';
 // @ts-ignore
 import {DragDropContext} from 'react-beautiful-dnd';
 import { status } from './model/Task';
 const App: React.FC= () =>{
   const [task, setTask] = useState<string>('');
   const initialState: Task[] = [];
-  const [state, dispatch] = useReducer(TaskReducer, initialState);
+  const [state, dispatch] = useReducer(TaskReducer,undefined,initializeState);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
